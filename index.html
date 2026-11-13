@@ -157,118 +157,1322 @@ function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").repl
 var LETTERS=["A","B","C","D"];
 
 var LESSONS={
- ladder:{id:"ladder",title:"Ladder Safety",tag:"OSHA",blurb:"Climb safe on roofs, lifts, and access ladders.",steps:[
-  {type:"slide",img:"slides/01_types.jpg",title:"Know your ladders",cap:"Pick the right ladder for the job. An extension ladder reaches a roof or high wall. An A-frame (step) ladder is free-standing for mid-height work. A fixed ladder is bolted to the building for roof access. A platform or mobile ladder is a rolling, stable work deck. Every ladder carries a duty-rating sticker, Type IAA (375 lb) down to Type III (200 lb), and it has to cover your weight plus clothing, tools, and PPE."},
-  {type:"slide",img:"slides/insp_ext.jpg",title:"Inspect an extension ladder",cap:"Before every use, work it over. The rung locks (pawls) must engage fully and hold each section. The rungs are tight, not bent or cracked. The side rails show no cracks or bends. The rope and pulley are not frayed. The feet are flat and anti-slip. Inspect again after any drop."},
-  {type:"slide",img:"slides/insp_aframe.jpg",title:"Inspect an A-frame (step) ladder",cap:"The spreader bars must lock fully open and stay rigid. The steps are tight and non-slip. The top cap is never a standing surface. The feet are flat and anti-slip. The manufacturer labels are present and legible, and get replaced if they are not."},
-  {type:"slide",img:"slides/insp_fixed.jpg",title:"Inspect a fixed ladder",cap:"A fixed ladder is bolted to the building, so check the mounting. The anchor bolts and brackets are tight with no rust. The rungs are solid and evenly spaced. The safety cage is secure with no damage. Check the welds and any corrosion, and confirm any fall-protection system works."},
-  {type:"slide",img:"slides/01_setup.jpg",title:"Set the ladder up right",cap:"A straight or extension ladder gets the 4:1 angle, a secured top, and firm, level footing before anyone climbs."},
-  {type:"slide",img:"slides/angle_photo.jpg",title:"The 4:1 angle",cap:"Set the ladder one foot out from the wall for every four feet of height, about a 75 degree angle. The arm test confirms it: toes at the feet, arms reach the rung straight out. Too steep and it can tip back, too shallow and the base can kick out."},
-  {type:"slide",img:"slides/02_climb.jpg",title:"Keep three points of contact",cap:"Two hands and one foot, or two feet and one hand, on the ladder at all times. Face the ladder and keep your hips between the rails."},
-  {type:"slide",img:"slides/03_extend.jpg",title:"Extend 3 feet above the landing",cap:"The side rails must reach at least 3 ft (0.9 m) above the roof edge so you have something solid to hold while you step off."},
-  {type:"slide",img:"slides/04_step.jpg",title:"Stepladders: never the top two",cap:"Open it fully and lock the spreaders. The top cap and the top step are not standing surfaces."},
-  {type:"slide",img:"slides/06_grease.jpg",title:"The grease factor",cap:"Our own work puts grease where your hands and feet go. Wipe the rungs, wear slip-resistant boots, and watch for grease on the roof."},
-  {type:"quiz",q:"A free-standing ladder you open into an A shape for mid-height work is a:",o:["Extension ladder","A-frame (step) ladder","Fixed ladder","Mobile platform ladder"],a:1,why:"An A-frame, or step ladder, is self-supporting and opens into an A. An extension ladder is not self-supporting and must lean against a surface."},
-  {type:"quiz",q:"A Type IA ladder has a duty rating of:",o:["200 lb","225 lb","250 lb","300 lb"],a:3,why:"Duty ratings run Type IAA 375 lb, IA 300 lb, I 250 lb, II 225 lb, III 200 lb. The rating must cover your weight plus clothing, tools, and PPE. Check the sticker."},
-  {type:"quiz",q:"You are working near overhead power lines. Which ladder is safe to use?",o:["Aluminum, it is lightest","Fiberglass or wood, it does not conduct","Any metal ladder is fine","Whatever is closest"],a:1,why:"Fiberglass or wood ladders are non-conductive. Never use a metal ladder near live electrical work or power lines."},
-  {type:"quiz",q:"Inspecting an extension ladder, the rung locks (pawls) should:",o:["Be loose so the sections slide easily","Engage fully and hold each section","Be removed before use","Only matter on the bottom section"],a:1,why:"The rung locks must engage fully and hold the fly section in place. Also check the rungs, rails, the rope and pulley, and the feet."},
-  {type:"quiz",q:"On a step ladder, the spreader bars must:",o:["Swing freely while you climb","Lock fully open and stay rigid","Be removed to fold flat","Face toward the wall"],a:1,why:"The spreader bars lock the ladder fully open and keep it rigid. If they are loose, bent, or will not lock, the ladder fails inspection."},
-  {type:"quiz",q:"A ladder fails inspection. What do you do?",o:["Use it carefully for light work","Tag it 'Dangerous, Do NOT use' and remove it from service","Tape over the crack","Keep using it until a replacement arrives"],a:1,why:"Tag a failed ladder 'Dangerous, Do NOT use,' remove it from service, and repair it only with manufacturer parts or destroy it. Never improvise a repair."},
-  {type:"quiz",q:"You are climbing down carrying a tool in each hand. What is the problem?",o:["Nothing, both hands are busy working","You lose three points of contact; keep at least one hand on the ladder","You should climb faster to finish","You should face away from the ladder"],a:1,why:"Keep three points of contact. Hoist tools with a line or use a tool belt so a hand is always free to grip."},
-  {type:"quiz",q:"An extension ladder is used to reach a roof. How far must the side rails extend above the roof edge?",o:["1 ft (0.3 m)","2 ft (0.6 m)","3 ft (0.9 m)","5 ft (1.5 m)"],a:2,why:"OSHA 1926.1053(b)(1): the side rails must extend at least 3 ft above the upper landing, or the ladder must be secured and a grab rail provided."},
-  {type:"quiz",q:"Your working height to the roof edge is 16 ft. Using the 4 to 1 rule, how far from the wall should the base sit?",o:["2 ft","4 ft","8 ft","16 ft"],a:1,why:"Base out equals working height divided by four. 16 divided by 4 is 4 ft out from the wall."}
- ]},
- hood:{id:"hood",title:"Hood, Filter & Grease Capture",tag:"NFPA 96",blurb:"How the system captures grease, and what we clean.",steps:[
-  {type:"slide",img:"hood/01_hood.jpg",title:"How the system captures grease",cap:"Grease-laden vapor rises off the cookline. The hood's one job is to capture those grease-laden vapors and gases before they spread (NFPA 96). Everything downstream exists to move and contain that grease."},
-  {type:"slide",img:"hood/02_filters.jpg",title:"Grease filters (baffles)",cap:"Air hits the angled baffles and spins. Grease flings out and drains down while the air passes through. Use listed grease filters, fit tight and set so the grease drains back (NFPA 96). Never mesh filters."},
-  {type:"slide",img:"diag/baffle.svg",title:"How a baffle filter works",cap:"The air changes direction as it passes the angled baffle blades. The grease is heavier and cannot make the turn, so it hits the blade and drains down the channel to the grease cup, while the clean air passes through."},
-  {type:"slide",img:"hood/03_cup.jpg",title:"The grease cup",cap:"What the filters catch drains into the grease cup. Empty it every service. An overflowing cup drips grease right back onto the cookline."},
-  {type:"slide",img:"hood/04_duct.jpg",title:"Up the duct to the fan",cap:"Whatever the filters miss rides up the duct to the fan, coating the duct walls, elbows, and fan. That is why we clean the entire run, not just the hood."},
-  {type:"slide",img:"hood/05_baremetal.jpg",title:"Clean to bare metal",cap:"NFPA 96 requires the system be cleaned to remove the combustible grease deposits (Chapter 11). The IKECA and Phil Ackland standard of practice is to clean to bare metal, checked with a depth gauge, 0.002 in (50 microns) the common benchmark. A greasy duct is fuel for a fire."},
-  {type:"quiz",q:"What is the main purpose of the exhaust hood?",o:["To cool the kitchen","To capture steam from the dish area","To capture grease-laden vapors and gases","To light the cookline"],a:2,why:"NFPA 96: the hood captures the grease-laden vapors and gases coming off the cooking equipment."},
-  {type:"quiz",q:"How should the baffles in a grease filter be installed?",o:["So captured grease can drain back down","Horizontally, flat across the hood","With the gaps facing up","Loosely, with room to rattle"],a:0,why:"Listed baffle filters are set so captured grease drains down into the grease cup. Fit them tight, never use mesh filters."},
-  {type:"quiz",q:"How do baffle filters remove grease from the air?",o:["They soak it up like a sponge","They spin grease out of the air as it passes the angled baffles","They burn it off","They cool the air until grease freezes"],a:1,why:"Air changes direction through the baffles; the grease is thrown out by centrifugal action and drains down while the air passes through."},
-  {type:"quiz",q:"The industry benchmark for a clean exhaust system is a residual grease film of:",o:["0.05 in","0.02 in","0.002 in (50 microns)","Whatever looks clean"],a:2,why:"NFPA 96 requires removing the combustible grease deposits. The practice standard is to clean to bare metal, with 0.002 in (50 microns) the common benchmark, checked with a depth gauge."},
-  {type:"quiz",q:"A cleaning is required to include:",o:["The hood and filters only","The entire exhaust system","Only the rooftop fan","Only what is visible from the kitchen"],a:1,why:"NFPA 96 (Chapter 11): the cleaning covers the entire exhaust system, hood to fan, and the report lists any areas that could not be cleaned."}
- ]},
- duct:{id:"duct",title:"Ductwork & Access Openings",tag:"NFPA 96",blurb:"Where we get into the duct, and how it has to be built.",steps:[
-  {type:"slide",img:"duct/duct_01.jpg",title:"Why access openings exist",cap:"You can't clean what you can't reach. NFPA 96 requires access openings in the duct so the whole system can be cleaned and inspected (Chapter 7). Any stretch we can't get into stays greasy, and grease is fuel for a fire."},
-  {type:"slide",img:"duct/duct_02.jpg",title:"Size the opening",cap:"Where the duct is large enough, an access panel is at least 20 in by 20 in. On smaller duct the opening is as large as the duct allows. The door is removable and gasketed so it seals tight after service."},
-  {type:"slide",img:"duct/duct_03.jpg",title:"Space them out",cap:"Openings go at 12 ft (3.7 m) intervals along a horizontal run, and at every change of direction. No elbow or turn gets skipped, so no section of duct is left unreachable."},
-  {type:"slide",img:"diag/ductspacing.svg",title:"Where the openings go",cap:"Access openings sit no more than 12 ft apart along a horizontal run, at every change of direction, on each floor of a vertical riser, and at the fan. That way a brush and light reach every inch of the system."},
-  {type:"slide",img:"duct/duct_04.jpg",title:"Vertical risers",cap:"On a vertical duct that runs between floors, there is an access opening at each floor, plus the top and bottom of the riser. That is how the full height gets cleaned."},
-  {type:"slide",img:"duct/duct_05.jpg",title:"The service label",cap:"Each panel carries a sign that reads ACCESS PANEL - DO NOT OBSTRUCT, and it is never painted over or sealed shut. After cleaning, the crew records the date, the company, and any areas not cleaned (NFPA 96, Chapter 11)."},
-  {type:"quiz",q:"Why does NFPA 96 require access openings in exhaust duct?",o:["To add airflow to the system","So the entire system can be reached, cleaned, and inspected","To cool the duct down","To let rainwater drain out"],a:1,why:"You can't clean what you can't reach. Access openings let the crew clean and inspect the full run (NFPA 96, Chapter 7)."},
-  {type:"quiz",q:"Where the duct size permits, an access panel must be at least:",o:["10 in x 10 in","12 in x 12 in","20 in x 20 in","36 in x 36 in"],a:2,why:"At least 20 in by 20 in where the duct allows. Smaller duct gets a panel as large as the duct permits."},
-  {type:"quiz",q:"On a horizontal duct run, access openings are spaced:",o:["Every 50 ft","At 12 ft intervals and at every change of direction","Only at the fan","Only at the hood"],a:1,why:"Openings at 12 ft (3.7 m) intervals and at each turn keep every section of duct reachable."},
-  {type:"quiz",q:"What sign must each access panel carry?",o:["\"HIGH VOLTAGE\"","\"ACCESS PANEL - DO NOT OBSTRUCT\"","\"NO SMOKING\"","No sign is required"],a:1,why:"NFPA 96 requires each access panel in the duct system to be marked ACCESS PANEL - DO NOT OBSTRUCT, so it is never blocked or sealed."},
-  {type:"quiz",q:"After cleaning, the service record shows the date, the company, and:",o:["Any areas that were not cleaned","The owner's phone number","The weight of grease removed","The duct temperature"],a:0,why:"NFPA 96 (Chapter 11): the record shows the date, servicing company, and any areas not cleaned. Never seal a panel shut."}
- ]},
- fans:{id:"fans",title:"Exhaust & Upblast Fans",tag:"NFPA 96",blurb:"The rooftop fan, its hinge kit, and keeping it clean.",steps:[
-  {type:"slide",img:"fan/fan_01.jpg",title:"The upblast exhaust fan",cap:"The upblast fan sits on the roof curb over the grease duct and pulls the grease-laden air up and out, discharging it up and away from the roof. It is the last stop in the system, and it runs in that grease all day."},
-  {type:"slide",img:"diag/fansection.svg",title:"Inside an upblast fan",cap:"Air is pulled up the duct, through the fan wheel, and discharged up and out over the dome, away from the roof. The motor sits in the airstream, which is why the fan must hinge for cleaning, and grease drains off the housing to a container."},
-  {type:"slide",img:"fan/fan_02.jpg",title:"It has to hinge open",cap:"NFPA 96 (8.1.1.1): an upblast fan with its motor in the airstream must be hinged, with a flexible weatherproof electrical cable and a service hold-open retainer, so it tilts up for cleaning and inspection without being disconnected. SDI's Super Hinge Kit does this on the heavier fans."},
-  {type:"slide",img:"fan/fan_03.jpg",title:"Grease containment",cap:"Grease draining off the fan goes to a readily accessible, noncombustible grease container, not onto the roof. Keep it in place and empty it every service. A grease-soaked roof is both a fire and a slip hazard."},
-  {type:"slide",img:"fan/fan_04.jpg",title:"Belts and bearings",cap:"Fan preventative maintenance: check the drive belt for wear and tension, replace it on schedule, and grease the bearings. A slipping or broken belt kills airflow and lets the grease load build up faster."},
-  {type:"slide",img:"fan/fan_05.jpg",title:"Clean the fan wheel",cap:"Grease cakes the fan wheel, blades, and housing. Clean it to bare metal like the rest of the system. A caked fan moves less air, runs hot, and adds fuel to a fire."},
-  {type:"quiz",q:"What does the upblast exhaust fan do?",o:["Cools the kitchen","Pulls the grease-laden air up and out, away from the roof","Supplies fresh make-up air","Filters the air clean"],a:1,why:"The upblast fan is the last stop, pulling the grease-laden air out and discharging it up and away from the roof."},
-  {type:"quiz",q:"NFPA 96 requires an upblast fan (motor in the airstream) to be:",o:["Bolted down permanently","Welded to the curb","Hinged, with a flexible cable and a hold-open retainer","Sealed shut"],a:2,why:"NFPA 96 8.1.1.1: hinged, with a flexible weatherproof cable and a service hold-open retainer, so it tilts up for cleaning. SDI's Super Hinge Kit."},
-  {type:"quiz",q:"Grease draining from the fan should go to:",o:["The roof surface","A readily accessible, noncombustible grease container","The storm drain","Nowhere, it evaporates"],a:1,why:"A tight, noncombustible, readily accessible container, kept in place and emptied every service. Grease on the roof is a fire and slip hazard."},
-  {type:"quiz",q:"Fan preventative maintenance includes:",o:["Painting the blades","Replacing the drive belt and greasing the bearings","Adding refrigerant","Sharpening the blades"],a:1,why:"Check and replace the drive belt, check tension and alignment, and grease the bearings."},
-  {type:"quiz",q:"A heavily greased fan wheel:",o:["Runs more efficiently","Moves less air, runs hot, and adds fuel for a fire","Is required by code","Is self-cleaning"],a:1,why:"Clean the fan to bare metal like the rest of the system. Caked grease cuts airflow and feeds a fire."}
- ]},
- loto:{id:"loto",title:"Lockout / Tagout",tag:"OSHA",blurb:"De-energize before you service the fan.",steps:[
-  {type:"slide",img:"loto/loto_01.jpg",title:"De-energize before service",cap:"Before you open a belt guard, reach into a fan, or service any powered equipment, the power has to be off. A fan that restarts with your hand in it does not give second chances. OSHA 1910.147 is the energy-control rule."},
-  {type:"slide",img:"diag/loto.svg",title:"The lockout sequence",cap:"Five steps, in order. Notify the kitchen, shut the fan down, turn the disconnect to OFF, apply your own lock and tag, then try-starting the fan to prove the power is gone. The lock and the DANGER - DO NOT OPERATE tag carry your name, and only you take them off."},
-  {type:"slide",img:"loto/loto_02.jpg",title:"Shut the disconnect",cap:"Find the equipment's own electrical disconnect, usually on the roof near the fan, and turn it to OFF. Shutting it at the disconnect, not just a wall switch, is what cuts power to the motor."},
-  {type:"slide",img:"loto/loto_03.jpg",title:"Lock it out",cap:"Put your own padlock on the disconnect, through a lockout hasp if needed, so no one can turn it back on. One lock, one key, and you hold the key. If several people work on it, each adds their own lock."},
-  {type:"slide",img:"loto/loto_04.jpg",title:"Tag it out",cap:"Hang a DANGER - DO NOT OPERATE tag on the lock with who locked it out, the date, and why. The tag tells everyone the equipment is down for service. Never remove a lock or tag that is not yours."},
-  {type:"slide",img:"loto/loto_05.jpg",title:"Verify zero energy",cap:"Before you touch the equipment, try to start it at the normal controls. If it stays dead, the lockout worked and it is safe to work. Then return the controls to off. This verification is what proves the power is really gone."},
-  {type:"quiz",q:"Before servicing a powered fan, you must first:",o:["Slow the blades by hand","De-energize it and lock out the power","Just tell a coworker","Work fast so it cannot start"],a:1,why:"OSHA 1910.147: the energy has to be controlled. De-energize, lock, tag, and verify before you touch it."},
-  {type:"quiz",q:"You cut the power at:",o:["The kitchen light switch","The equipment's electrical disconnect","The thermostat","The grease cup"],a:1,why:"Turn the equipment's own disconnect to OFF so power to the motor is cut, not just a wall switch."},
-  {type:"quiz",q:"Whose lock goes on the disconnect, and who holds the key?",o:["A shared shop lock on a shared key","Your own lock, and you hold the only key","The building manager's lock","No lock is needed if you tag it"],a:1,why:"One lock, one key, held by you. If several people work on it, each adds their own lock."},
-  {type:"quiz",q:"The DO NOT OPERATE tag shows:",o:["Who locked it out, the date, and why","The equipment model number","The grease weight removed","The warranty date"],a:0,why:"The tag names who, when, and why. Nobody removes a lock or tag that is not theirs."},
-  {type:"quiz",q:"The final step before working is to:",o:["Wait five minutes","Try to start it and confirm it stays dead","Paint the guard","Call the office"],a:1,why:"Verify zero energy: try the normal controls; if it will not start, the lockout worked. Then return the controls to off."}
- ]},
- ppe:{id:"ppe",title:"PPE & Respirators",tag:"OSHA",blurb:"Dress for grease, caustics, and overhead work.",steps:[
-  {type:"slide",img:"ppe/ppe_01.jpg",title:"Dress for the job",cap:"Kitchen exhaust cleaning means caustic degreaser, hot grease overhead, and slick surfaces. Full PPE is safety glasses, chemical-resistant gloves, a waterproof apron or suit, and slip-resistant boots. OSHA requires the employer to provide it and you to wear it."},
-  {type:"slide",img:"ppe/ppe_02.jpg",title:"Eye and face protection",cap:"You work under dripping grease and spray caustic cleaner overhead, so splash and drip go straight at your eyes. Wear safety glasses, goggles, or a face shield. Caustic degreaser in the eye is an emergency."},
-  {type:"slide",img:"ppe/ppe_03.jpg",title:"Chemical-resistant gloves",cap:"Degreasers are caustic and burn skin on contact. Wear long nitrile or rubber chemical-resistant gloves, not cotton or leather, and cover the gap between glove and sleeve."},
-  {type:"slide",img:"ppe/ppe_04.jpg",title:"Wear a respirator",cap:"When you fog or spray degreaser, or work an enclosed space with fumes, wear a proper half-mask respirator with the right cartridges. Under OSHA 1910.134 a tight-fitting respirator must be fit-tested to you, and you must be clean-shaven at the seal."},
-  {type:"slide",img:"ppe/ppe_05.jpg",title:"Know your chemical",cap:"Read the SDS and the label before you use any cleaner. Know what it is, how to handle a splash, and where the nearest water or eyewash is. Cover your skin, never mix chemicals, and keep eyewash within reach."},
-  {type:"quiz",q:"PPE for kitchen exhaust cleaning includes:",o:["Just gloves","Safety glasses, chemical gloves, apron, and slip-resistant boots","Sunglasses and sneakers","No PPE if you are careful"],a:1,why:"Caustics, overhead grease, and slick surfaces call for full PPE. The employer provides it and you wear it."},
-  {type:"quiz",q:"Why wear eye protection?",o:["To look professional","Caustic cleaner and dripping grease go right at your eyes","To block sunlight","It is optional indoors"],a:1,why:"You spray caustic overhead and work under drips; a chemical splash in the eye is an emergency."},
-  {type:"quiz",q:"The right gloves for degreaser are:",o:["Cotton work gloves","Leather gloves","Long nitrile or rubber chemical-resistant gloves","Bare hands with a good grip"],a:2,why:"Degreasers burn skin; wear chemical-resistant gloves and cover the glove-to-sleeve gap."},
-  {type:"quiz",q:"A tight-fitting respirator must be:",o:["Any size, shared between the crew","Fit-tested to you, and you clean-shaven at the seal","Worn over a beard","Only for outdoor work"],a:1,why:"OSHA 1910.134: fit-tested to the wearer, with a clean seal, and the right cartridges for the job."},
-  {type:"quiz",q:"Before using a new cleaner you:",o:["Smell it to identify it","Read the SDS and label and locate eyewash","Mix it stronger","Skip it if you are in a hurry"],a:1,why:"Know the chemical, how to handle a splash, and where water or eyewash is. Never mix chemicals."}
- ]},
- cs:{id:"cs",title:"Confined Space Entry",tag:"OSHA",blurb:"Big ducts and plenums you can climb into.",steps:[
-  {type:"slide",img:"cs/cs_01.jpg",title:"What is a confined space",cap:"A large duct, plenum, or walk-in hood you can climb into, with a limited way in and out and not meant to be occupied, is a confined space. If it has a hazard like bad air, it is permit-required. OSHA 1910.146 governs entry."},
-  {type:"slide",img:"diag/csentry.svg",title:"The entry setup",cap:"Everything is in place before anyone goes in. The air is tested for oxygen, flammable vapor, and toxic gas. A blower pushes fresh air in. An attendant stays outside on a retrieval line and never enters. The entry permit is posted. The attendant and the permit are what make entry safe."},
-  {type:"slide",img:"cs/cs_02.jpg",title:"Test the air first",cap:"Before anyone goes in, test the atmosphere with a calibrated gas meter: enough oxygen, no flammable vapor, no toxic gas. Grease solvents and low oxygen are invisible. Never enter air you have not tested."},
-  {type:"slide",img:"cs/cs_03.jpg",title:"The attendant",cap:"An attendant stays outside the whole time, in constant voice or visual contact with the entrant, with a retrieval line rigged and ready. The attendant watches for trouble and calls rescue, and never enters the space."},
-  {type:"slide",img:"cs/cs_04.jpg",title:"Ventilate the space",cap:"Lock out the fan first, then set up a blower to push fresh air in and keep it moving the entire time anyone is inside. Ventilation keeps the atmosphere safe while the work goes on."},
-  {type:"slide",img:"cs/cs_05.jpg",title:"The entry permit",cap:"A permit-required space needs a written entry permit: the hazards, the air-test results, who is entering and attending, and the rescue plan, all before entry. Most confined-space deaths are would-be rescuers, so never dive in to save someone without the plan and the gear."},
-  {type:"quiz",q:"A large duct or plenum you can climb into, with a limited way out, is:",o:["A regular work area","A confined space","Exempt from the rules","Safe once the fan is off"],a:1,why:"OSHA 1910.146: large enough to enter, limited entry and exit, not meant for occupancy. With a hazard it is permit-required."},
-  {type:"quiz",q:"Before entry you must:",o:["Just look inside","Test the atmosphere with a gas meter","Hold your breath","Open a window"],a:1,why:"Test for oxygen, flammable vapor, and toxic gas. Never enter untested air."},
-  {type:"quiz",q:"The attendant's job is to:",o:["Enter first to check it out","Stay outside, keep contact, and be ready to call rescue","Hold the ladder","Take a break"],a:1,why:"The attendant stays outside the whole time with a retrieval line ready, and never enters the space."},
-  {type:"quiz",q:"While someone is inside, ventilation should be:",o:["Off to save power","Running continuously, with the fan locked out","On for a minute, then off","Only if it smells bad"],a:1,why:"Lock out the fan, then keep fresh air moving the entire time anyone is inside."},
-  {type:"quiz",q:"If someone collapses inside, you should:",o:["Rush in and pull them out","Call rescue, and never enter without the plan and gear","Wait and see","Turn the fan on"],a:1,why:"Most confined-space deaths are would-be rescuers. Follow the rescue plan with proper equipment."}
- ]},
- freq:{id:"freq",title:"Cleaning Frequencies & Bare Metal",tag:"NFPA 96",blurb:"How often to clean, and how clean is clean.",steps:[
-  {type:"slide",img:"freq/freq_01.jpg",title:"How often to clean",cap:"NFPA 96 sets how often a system is inspected and cleaned by how much grease the cooking produces, not by guesswork. The busier and greasier the kitchen, the shorter the interval."},
-  {type:"slide",img:"freq/freq_02.jpg",title:"The four intervals",cap:"NFPA 96 Table 11.4 sets four tiers. Solid fuel (wood, charcoal) is monthly. High-volume (charbroiling, wok, 24-hour) is quarterly. Moderate-volume is semiannual. Low-volume (seasonal, churches, camps) is annual."},
-  {type:"slide",img:"freq/freq_03.jpg",title:"It is a minimum",cap:"The table is a minimum inspection schedule, not a ceiling. If the system is loading up with grease faster than the interval, clean it sooner. The authority having jurisdiction can require it more often."},
-  {type:"slide",img:"freq/freq_04.jpg",title:"Clean to bare metal",cap:"The standard of clean is to remove the combustible grease deposits (NFPA 96, Chapter 11). The IKECA and Phil Ackland practice standard is bare metal, checked with a depth gauge, with 0.002 in (50 microns) the common benchmark. Grease left behind is fuel left behind."},
-  {type:"slide",img:"freq/freq_05.jpg",title:"Document the service",cap:"After cleaning, record the service: the date, the company, and any areas that could not be cleaned, and leave a certificate or label on the system. The record goes to the owner and the authority having jurisdiction. If it is not documented, it did not happen."},
-  {type:"quiz",q:"NFPA 96 sets cleaning frequency by:",o:["The day of the week","How much grease the cooking produces","The size of the building","The owner's budget"],a:1,why:"Frequency is driven by cooking volume. The greasier the operation, the shorter the interval."},
-  {type:"quiz",q:"A solid-fuel (wood or charcoal) operation is cleaned:",o:["Monthly","Annually","Every five years","Never"],a:0,why:"NFPA 96 Table 11.4: solid-fuel cooking is the monthly tier."},
-  {type:"quiz",q:"High-volume cooking (charbroiling, wok, 24-hour) is cleaned:",o:["Annually","Quarterly","Every two years","Weekly"],a:1,why:"High-volume operations are the quarterly tier."},
-  {type:"quiz",q:"The cleaning frequency table is:",o:["A maximum you cannot exceed","A minimum; clean sooner if grease builds faster","Optional","Only a loose suggestion"],a:1,why:"It is a minimum schedule. Heavy grease loading or the authority having jurisdiction can require more frequent cleaning."},
-  {type:"quiz",q:"The standard of a clean system is:",o:["It looks clean from the floor","Bare metal, with the combustible grease removed","Wiped down once","The filters only"],a:1,why:"Remove the combustible grease to bare metal, with 0.002 in (50 microns) the benchmark, checked with a depth gauge."}
- ]}
+ "ladder": {
+  "id": "ladder",
+  "title": "Ladder Safety",
+  "tag": "OSHA",
+  "blurb": "Climb safe on roofs, lifts, and access ladders.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "slides/01_types.jpg",
+    "title": "Know your ladders",
+    "cap": "Pick the right ladder for the job. An extension ladder reaches a roof or high wall. An A-frame (step) ladder is free-standing for mid-height work. A fixed ladder is bolted to the building for roof access. A platform or mobile ladder is a rolling, stable work deck. Every ladder carries a duty-rating sticker, Type IAA (375 lb) down to Type III (200 lb), and it has to cover your weight plus clothing, tools, and PPE."
+   },
+   {
+    "type": "slide",
+    "img": "slides/insp_ext.jpg",
+    "title": "Inspect an extension ladder",
+    "cap": "Before every use, work it over. The rung locks (pawls) must engage fully and hold each section. The rungs are tight, not bent or cracked. The side rails show no cracks or bends. The rope and pulley are not frayed. The feet are flat and anti-slip. Inspect again after any drop."
+   },
+   {
+    "type": "slide",
+    "img": "slides/insp_aframe.jpg",
+    "title": "Inspect an A-frame (step) ladder",
+    "cap": "The spreader bars must lock fully open and stay rigid. The steps are tight and non-slip. The top cap is never a standing surface. The feet are flat and anti-slip. The manufacturer labels are present and legible, and get replaced if they are not."
+   },
+   {
+    "type": "slide",
+    "img": "slides/insp_fixed.jpg",
+    "title": "Inspect a fixed ladder",
+    "cap": "A fixed ladder is bolted to the building, so check the mounting. The anchor bolts and brackets are tight with no rust. The rungs are solid and evenly spaced. The safety cage is secure with no damage. Check the welds and any corrosion, and confirm any fall-protection system works."
+   },
+   {
+    "type": "slide",
+    "img": "slides/01_setup.jpg",
+    "title": "Set the ladder up right",
+    "cap": "A straight or extension ladder gets the 4:1 angle, a secured top, and firm, level footing before anyone climbs."
+   },
+   {
+    "type": "slide",
+    "img": "slides/angle_photo.jpg",
+    "title": "The 4:1 angle",
+    "cap": "Set the ladder one foot out from the wall for every four feet of height, about a 75 degree angle. The arm test confirms it: toes at the feet, arms reach the rung straight out. Too steep and it can tip back, too shallow and the base can kick out."
+   },
+   {
+    "type": "slide",
+    "img": "slides/02_climb.jpg",
+    "title": "Keep three points of contact",
+    "cap": "Two hands and one foot, or two feet and one hand, on the ladder at all times. Face the ladder and keep your hips between the rails."
+   },
+   {
+    "type": "slide",
+    "img": "slides/03_extend.jpg",
+    "title": "Extend 3 feet above the landing",
+    "cap": "The side rails must reach at least 3 ft (0.9 m) above the roof edge so you have something solid to hold while you step off."
+   },
+   {
+    "type": "slide",
+    "img": "slides/04_step.jpg",
+    "title": "Stepladders: never the top two",
+    "cap": "Open it fully and lock the spreaders. The top cap and the top step are not standing surfaces."
+   },
+   {
+    "type": "slide",
+    "img": "slides/06_grease.jpg",
+    "title": "The grease factor",
+    "cap": "Our own work puts grease where your hands and feet go. Wipe the rungs, wear slip-resistant boots, and watch for grease on the roof."
+   },
+   {
+    "type": "quiz",
+    "q": "A free-standing ladder you open into an A shape for mid-height work is a:",
+    "o": [
+     "Extension ladder",
+     "A-frame (step) ladder",
+     "Fixed ladder",
+     "Mobile platform ladder"
+    ],
+    "a": 1,
+    "why": "An A-frame, or step ladder, is self-supporting and opens into an A. An extension ladder is not self-supporting and must lean against a surface."
+   },
+   {
+    "type": "quiz",
+    "q": "A Type IA ladder has a duty rating of:",
+    "o": [
+     "200 lb",
+     "225 lb",
+     "250 lb",
+     "300 lb"
+    ],
+    "a": 3,
+    "why": "Duty ratings run Type IAA 375 lb, IA 300 lb, I 250 lb, II 225 lb, III 200 lb. The rating must cover your weight plus clothing, tools, and PPE. Check the sticker."
+   },
+   {
+    "type": "quiz",
+    "q": "You are working near overhead power lines. Which ladder is safe to use?",
+    "o": [
+     "Aluminum, it is lightest",
+     "Fiberglass or wood, it does not conduct",
+     "Any metal ladder is fine",
+     "Whatever is closest"
+    ],
+    "a": 1,
+    "why": "Fiberglass or wood ladders are non-conductive. Never use a metal ladder near live electrical work or power lines."
+   },
+   {
+    "type": "quiz",
+    "q": "Inspecting an extension ladder, the rung locks (pawls) should:",
+    "o": [
+     "Be loose so the sections slide easily",
+     "Engage fully and hold each section",
+     "Be removed before use",
+     "Only matter on the bottom section"
+    ],
+    "a": 1,
+    "why": "The rung locks must engage fully and hold the fly section in place. Also check the rungs, rails, the rope and pulley, and the feet."
+   },
+   {
+    "type": "quiz",
+    "q": "On a step ladder, the spreader bars must:",
+    "o": [
+     "Swing freely while you climb",
+     "Lock fully open and stay rigid",
+     "Be removed to fold flat",
+     "Face toward the wall"
+    ],
+    "a": 1,
+    "why": "The spreader bars lock the ladder fully open and keep it rigid. If they are loose, bent, or will not lock, the ladder fails inspection."
+   },
+   {
+    "type": "quiz",
+    "q": "A ladder fails inspection. What do you do?",
+    "o": [
+     "Use it carefully for light work",
+     "Tag it 'Dangerous, Do NOT use' and remove it from service",
+     "Tape over the crack",
+     "Keep using it until a replacement arrives"
+    ],
+    "a": 1,
+    "why": "Tag a failed ladder 'Dangerous, Do NOT use,' remove it from service, and repair it only with manufacturer parts or destroy it. Never improvise a repair."
+   },
+   {
+    "type": "quiz",
+    "q": "You are climbing down carrying a tool in each hand. What is the problem?",
+    "o": [
+     "Nothing, both hands are busy working",
+     "You lose three points of contact; keep at least one hand on the ladder",
+     "You should climb faster to finish",
+     "You should face away from the ladder"
+    ],
+    "a": 1,
+    "why": "Keep three points of contact. Hoist tools with a line or use a tool belt so a hand is always free to grip."
+   },
+   {
+    "type": "quiz",
+    "q": "An extension ladder is used to reach a roof. How far must the side rails extend above the roof edge?",
+    "o": [
+     "1 ft (0.3 m)",
+     "2 ft (0.6 m)",
+     "3 ft (0.9 m)",
+     "5 ft (1.5 m)"
+    ],
+    "a": 2,
+    "why": "OSHA 1926.1053(b)(1): the side rails must extend at least 3 ft above the upper landing, or the ladder must be secured and a grab rail provided."
+   },
+   {
+    "type": "quiz",
+    "q": "Your working height to the roof edge is 16 ft. Using the 4 to 1 rule, how far from the wall should the base sit?",
+    "o": [
+     "2 ft",
+     "4 ft",
+     "8 ft",
+     "16 ft"
+    ],
+    "a": 1,
+    "why": "Base out equals working height divided by four. 16 divided by 4 is 4 ft out from the wall."
+   },
+   {
+    "type": "quiz",
+    "q": "Ladders shall be inspected for defects:",
+    "o": [
+     "Annually",
+     "By the authority having jurisdiction",
+     "By the client",
+     "Periodically and after any occurrence that could affect safe use"
+    ],
+    "a": 3,
+    "why": "Inspect ladders periodically and after any drop, fall, or event that could affect their safe use."
+   }
+  ]
+ },
+ "hood": {
+  "id": "hood",
+  "title": "Hood, Filter & Grease Capture",
+  "tag": "NFPA 96",
+  "blurb": "How the system captures grease, and what we clean.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "hood/01_hood.jpg",
+    "title": "How the system captures grease",
+    "cap": "Grease-laden vapor rises off the cookline. The hood's one job is to capture those grease-laden vapors and gases before they spread (NFPA 96). Everything downstream exists to move and contain that grease."
+   },
+   {
+    "type": "slide",
+    "img": "hood/02_filters.jpg",
+    "title": "Grease filters (baffles)",
+    "cap": "Air hits the angled baffles and spins. Grease flings out and drains down while the air passes through. Use listed grease filters, fit tight and set so the grease drains back (NFPA 96). Never mesh filters."
+   },
+   {
+    "type": "slide",
+    "img": "diag/baffle.svg",
+    "title": "How a baffle filter works",
+    "cap": "The air changes direction as it passes the angled baffle blades. The grease is heavier and cannot make the turn, so it hits the blade and drains down the channel to the grease cup, while the clean air passes through."
+   },
+   {
+    "type": "slide",
+    "img": "hood/03_cup.jpg",
+    "title": "The grease cup",
+    "cap": "What the filters catch drains into the grease cup. Empty it every service. An overflowing cup drips grease right back onto the cookline."
+   },
+   {
+    "type": "slide",
+    "img": "hood/04_duct.jpg",
+    "title": "Up the duct to the fan",
+    "cap": "Whatever the filters miss rides up the duct to the fan, coating the duct walls, elbows, and fan. That is why we clean the entire run, not just the hood."
+   },
+   {
+    "type": "slide",
+    "img": "hood/05_baremetal.jpg",
+    "title": "Clean to bare metal",
+    "cap": "NFPA 96 requires the system be cleaned to remove the combustible grease deposits (Chapter 11). The IKECA and Phil Ackland standard of practice is to clean to bare metal, checked with a depth gauge, 0.002 in (50 microns) the common benchmark. A greasy duct is fuel for a fire."
+   },
+   {
+    "type": "quiz",
+    "q": "What is the main purpose of the exhaust hood?",
+    "o": [
+     "To cool the kitchen",
+     "To capture steam from the dish area",
+     "To capture grease-laden vapors and gases",
+     "To light the cookline"
+    ],
+    "a": 2,
+    "why": "NFPA 96: the hood captures the grease-laden vapors and gases coming off the cooking equipment."
+   },
+   {
+    "type": "quiz",
+    "q": "How should the baffles in a grease filter be installed?",
+    "o": [
+     "So captured grease can drain back down",
+     "Horizontally, flat across the hood",
+     "With the gaps facing up",
+     "Loosely, with room to rattle"
+    ],
+    "a": 0,
+    "why": "Listed baffle filters are set so captured grease drains down into the grease cup. Fit them tight, never use mesh filters."
+   },
+   {
+    "type": "quiz",
+    "q": "How do baffle filters remove grease from the air?",
+    "o": [
+     "They soak it up like a sponge",
+     "They spin grease out of the air as it passes the angled baffles",
+     "They burn it off",
+     "They cool the air until grease freezes"
+    ],
+    "a": 1,
+    "why": "Air changes direction through the baffles; the grease is thrown out by centrifugal action and drains down while the air passes through."
+   },
+   {
+    "type": "quiz",
+    "q": "The industry benchmark for a clean exhaust system is a residual grease film of:",
+    "o": [
+     "0.05 in",
+     "0.02 in",
+     "0.002 in (50 microns)",
+     "Whatever looks clean"
+    ],
+    "a": 2,
+    "why": "NFPA 96 requires removing the combustible grease deposits. The practice standard is to clean to bare metal, with 0.002 in (50 microns) the common benchmark, checked with a depth gauge."
+   },
+   {
+    "type": "quiz",
+    "q": "A cleaning is required to include:",
+    "o": [
+     "The hood and filters only",
+     "The entire exhaust system",
+     "Only the rooftop fan",
+     "Only what is visible from the kitchen"
+    ],
+    "a": 1,
+    "why": "NFPA 96 (Chapter 11): the cleaning covers the entire exhaust system, hood to fan, and the report lists any areas that could not be cleaned."
+   },
+   {
+    "type": "quiz",
+    "q": "The baffles in a grease filter are oriented:",
+    "o": [
+     "Vertical",
+     "Horizontal",
+     "The technician's choice",
+     "Alternating vertical and horizontal"
+    ],
+    "a": 0,
+    "why": "NFPA 96: baffles are installed vertical so captured grease drains down into the cup."
+   },
+   {
+    "type": "quiz",
+    "q": "A kitchen exhaust hood shall be sized to:",
+    "o": [
+     "Extend 16 in beyond the appliance",
+     "Capture the grease-laden vapors",
+     "Sit flush with the largest appliance",
+     "Match the ceiling height"
+    ],
+    "a": 1,
+    "why": "NFPA 96: the hood is sized to capture the grease-laden vapors coming off the equipment below."
+   },
+   {
+    "type": "quiz",
+    "q": "Filter grease drip trays shall be sized:",
+    "o": [
+     "12 in longer than the filters",
+     "As large as the owner wants",
+     "Only as large as necessary to collect the grease",
+     "By the authority having jurisdiction"
+    ],
+    "a": 2,
+    "why": "NFPA 96: drip trays are sized only as large as necessary to collect the grease."
+   }
+  ]
+ },
+ "duct": {
+  "id": "duct",
+  "title": "Ductwork & Access Openings",
+  "tag": "NFPA 96",
+  "blurb": "Where we get into the duct, and how it has to be built.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "duct/duct_01.jpg",
+    "title": "Why access openings exist",
+    "cap": "You can't clean what you can't reach. NFPA 96 requires access openings in the duct so the whole system can be cleaned and inspected (Chapter 7). Any stretch we can't get into stays greasy, and grease is fuel for a fire."
+   },
+   {
+    "type": "slide",
+    "img": "duct/duct_02.jpg",
+    "title": "Size the opening",
+    "cap": "Where the duct is large enough, an access panel is at least 20 in by 20 in. On smaller duct the opening is as large as the duct allows. The door is removable and gasketed so it seals tight after service."
+   },
+   {
+    "type": "slide",
+    "img": "duct/duct_03.jpg",
+    "title": "Space them out",
+    "cap": "Openings go at 12 ft (3.7 m) intervals along a horizontal run, and at every change of direction. No elbow or turn gets skipped, so no section of duct is left unreachable."
+   },
+   {
+    "type": "slide",
+    "img": "diag/ductspacing.svg",
+    "title": "Where the openings go",
+    "cap": "Access openings sit no more than 12 ft apart along a horizontal run, at every change of direction, on each floor of a vertical riser, and at the fan. That way a brush and light reach every inch of the system."
+   },
+   {
+    "type": "slide",
+    "img": "duct/duct_04.jpg",
+    "title": "Vertical risers",
+    "cap": "On a vertical duct that runs between floors, there is an access opening at each floor, plus the top and bottom of the riser. That is how the full height gets cleaned."
+   },
+   {
+    "type": "slide",
+    "img": "duct/duct_05.jpg",
+    "title": "The service label",
+    "cap": "Each panel carries a sign that reads ACCESS PANEL - DO NOT OBSTRUCT, and it is never painted over or sealed shut. After cleaning, the crew records the date, the company, and any areas not cleaned (NFPA 96, Chapter 11)."
+   },
+   {
+    "type": "quiz",
+    "q": "Why does NFPA 96 require access openings in exhaust duct?",
+    "o": [
+     "To add airflow to the system",
+     "So the entire system can be reached, cleaned, and inspected",
+     "To cool the duct down",
+     "To let rainwater drain out"
+    ],
+    "a": 1,
+    "why": "You can't clean what you can't reach. Access openings let the crew clean and inspect the full run (NFPA 96, Chapter 7)."
+   },
+   {
+    "type": "quiz",
+    "q": "Where the duct size permits, an access panel must be at least:",
+    "o": [
+     "10 in x 10 in",
+     "12 in x 12 in",
+     "20 in x 20 in",
+     "36 in x 36 in"
+    ],
+    "a": 2,
+    "why": "At least 20 in by 20 in where the duct allows. Smaller duct gets a panel as large as the duct permits."
+   },
+   {
+    "type": "quiz",
+    "q": "On a horizontal duct run, access openings are spaced:",
+    "o": [
+     "Every 50 ft",
+     "At 12 ft intervals and at every change of direction",
+     "Only at the fan",
+     "Only at the hood"
+    ],
+    "a": 1,
+    "why": "Openings at 12 ft (3.7 m) intervals and at each turn keep every section of duct reachable."
+   },
+   {
+    "type": "quiz",
+    "q": "What sign must each access panel carry?",
+    "o": [
+     "\"HIGH VOLTAGE\"",
+     "\"ACCESS PANEL - DO NOT OBSTRUCT\"",
+     "\"NO SMOKING\"",
+     "No sign is required"
+    ],
+    "a": 1,
+    "why": "NFPA 96 requires each access panel in the duct system to be marked ACCESS PANEL - DO NOT OBSTRUCT, so it is never blocked or sealed."
+   },
+   {
+    "type": "quiz",
+    "q": "After cleaning, the service record shows the date, the company, and:",
+    "o": [
+     "Any areas that were not cleaned",
+     "The owner's phone number",
+     "The weight of grease removed",
+     "The duct temperature"
+    ],
+    "a": 0,
+    "why": "NFPA 96 (Chapter 11): the record shows the date, servicing company, and any areas not cleaned. Never seal a panel shut."
+   },
+   {
+    "type": "quiz",
+    "q": "Combustible materials must be kept at least how far from exhaust ductwork?",
+    "o": [
+     "12 in",
+     "16 in",
+     "18 in",
+     "24 in"
+    ],
+    "a": 2,
+    "why": "NFPA 96: a minimum of 18 in (457 mm) clearance from combustibles, unless the duct is enclosed or rated for less."
+   },
+   {
+    "type": "quiz",
+    "q": "When cleaning or inspecting a system, NFPA 96 requires that:",
+    "o": [
+     "All interior surfaces shall be accessible",
+     "Only the hood must be reached",
+     "The appliances be removed first",
+     "The fan can be skipped"
+    ],
+    "a": 0,
+    "why": "All interior surfaces of the system shall be accessible for cleaning and inspection."
+   },
+   {
+    "type": "quiz",
+    "q": "On non-listed horizontal duct, an access opening edge shall be at least how far from the duct edges or welded seams?",
+    "o": [
+     "0.5 in",
+     "1.5 in",
+     "2 in",
+     "6 in"
+    ],
+    "a": 1,
+    "why": "NFPA 96: at least 1.5 in (38 mm) from all edges and welded seams."
+   },
+   {
+    "type": "quiz",
+    "q": "Access to an in-line fan (duct connected on both ends) shall be provided:",
+    "o": [
+     "Within 4 ft of one side",
+     "By tipping the fan over",
+     "Within 3 ft of both sides",
+     "By cutting the collars off"
+    ],
+    "a": 2,
+    "why": "Access shall be within 3 ft (0.9 m) of both sides of an in-line fan."
+   },
+   {
+    "type": "quiz",
+    "q": "If a duct covering or enclosure is damaged during the work, you shall:",
+    "o": [
+     "Repair and restore it to its intended listing",
+     "Just cover the access panels",
+     "Call the executive chef",
+     "Call the original installer"
+    ],
+    "a": 0,
+    "why": "NFPA 96: repair and restore the covering or enclosure to meet its intended listing."
+   }
+  ]
+ },
+ "fans": {
+  "id": "fans",
+  "title": "Exhaust & Upblast Fans",
+  "tag": "NFPA 96",
+  "blurb": "The rooftop fan, its hinge kit, and keeping it clean.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "fan/fan_01.jpg",
+    "title": "The upblast exhaust fan",
+    "cap": "The upblast fan sits on the roof curb over the grease duct and pulls the grease-laden air up and out, discharging it up and away from the roof. It is the last stop in the system, and it runs in that grease all day."
+   },
+   {
+    "type": "slide",
+    "img": "diag/fansection.svg",
+    "title": "Inside an upblast fan",
+    "cap": "Air is pulled up the duct, through the fan wheel, and discharged up and out over the dome, away from the roof. The motor sits in the airstream, which is why the fan must hinge for cleaning, and grease drains off the housing to a container."
+   },
+   {
+    "type": "slide",
+    "img": "fan/fan_02.jpg",
+    "title": "It has to hinge open",
+    "cap": "NFPA 96 (8.1.1.1): an upblast fan with its motor in the airstream must be hinged, with a flexible weatherproof electrical cable and a service hold-open retainer, so it tilts up for cleaning and inspection without being disconnected. SDI's Super Hinge Kit does this on the heavier fans."
+   },
+   {
+    "type": "slide",
+    "img": "fan/fan_03.jpg",
+    "title": "Grease containment",
+    "cap": "Grease draining off the fan goes to a readily accessible, noncombustible grease container, not onto the roof. Keep it in place and empty it every service. A grease-soaked roof is both a fire and a slip hazard."
+   },
+   {
+    "type": "slide",
+    "img": "fan/fan_04.jpg",
+    "title": "Belts and bearings",
+    "cap": "Fan preventative maintenance: check the drive belt for wear and tension, replace it on schedule, and grease the bearings. A slipping or broken belt kills airflow and lets the grease load build up faster."
+   },
+   {
+    "type": "slide",
+    "img": "fan/fan_05.jpg",
+    "title": "Clean the fan wheel",
+    "cap": "Grease cakes the fan wheel, blades, and housing. Clean it to bare metal like the rest of the system. A caked fan moves less air, runs hot, and adds fuel to a fire."
+   },
+   {
+    "type": "quiz",
+    "q": "What does the upblast exhaust fan do?",
+    "o": [
+     "Cools the kitchen",
+     "Pulls the grease-laden air up and out, away from the roof",
+     "Supplies fresh make-up air",
+     "Filters the air clean"
+    ],
+    "a": 1,
+    "why": "The upblast fan is the last stop, pulling the grease-laden air out and discharging it up and away from the roof."
+   },
+   {
+    "type": "quiz",
+    "q": "NFPA 96 requires an upblast fan (motor in the airstream) to be:",
+    "o": [
+     "Bolted down permanently",
+     "Welded to the curb",
+     "Hinged, with a flexible cable and a hold-open retainer",
+     "Sealed shut"
+    ],
+    "a": 2,
+    "why": "NFPA 96 8.1.1.1: hinged, with a flexible weatherproof cable and a service hold-open retainer, so it tilts up for cleaning. SDI's Super Hinge Kit."
+   },
+   {
+    "type": "quiz",
+    "q": "Grease draining from the fan should go to:",
+    "o": [
+     "The roof surface",
+     "A readily accessible, noncombustible grease container",
+     "The storm drain",
+     "Nowhere, it evaporates"
+    ],
+    "a": 1,
+    "why": "A tight, noncombustible, readily accessible container, kept in place and emptied every service. Grease on the roof is a fire and slip hazard."
+   },
+   {
+    "type": "quiz",
+    "q": "Fan preventative maintenance includes:",
+    "o": [
+     "Painting the blades",
+     "Replacing the drive belt and greasing the bearings",
+     "Adding refrigerant",
+     "Sharpening the blades"
+    ],
+    "a": 1,
+    "why": "Check and replace the drive belt, check tension and alignment, and grease the bearings."
+   },
+   {
+    "type": "quiz",
+    "q": "A heavily greased fan wheel:",
+    "o": [
+     "Runs more efficiently",
+     "Moves less air, runs hot, and adds fuel for a fire",
+     "Is required by code",
+     "Is self-cleaning"
+    ],
+    "a": 1,
+    "why": "Clean the fan to bare metal like the rest of the system. Caked grease cuts airflow and feeds a fire."
+   },
+   {
+    "type": "quiz",
+    "q": "An upblast fan needs a cleaning access opening on the housing curvature. If circular, the minimum diameter is:",
+    "o": [
+     "2 in",
+     "4 in",
+     "6 in",
+     "8 in"
+    ],
+    "a": 1,
+    "why": "NFPA 96: a circular opening at least 4 in (101 mm) in diameter."
+   },
+   {
+    "type": "quiz",
+    "q": "If that upblast-fan access opening is rectangular, the minimum size is:",
+    "o": [
+     "2 x 4 in",
+     "3 x 5 in",
+     "4 x 6 in",
+     "6 x 8 in"
+    ],
+    "a": 1,
+    "why": "NFPA 96: a rectangular opening at least 3 x 5 in."
+   },
+   {
+    "type": "quiz",
+    "q": "An upblast-fan grease receptacle shall not exceed:",
+    "o": [
+     "1 quart",
+     "2 quarts",
+     "1 gallon",
+     "2 gallons"
+    ],
+    "a": 2,
+    "why": "NFPA 96: the grease receptacle shall not exceed 1 gallon (3.8 L)."
+   },
+   {
+    "type": "quiz",
+    "q": "Exhaust fans shall operate:",
+    "o": [
+     "Only during cleaning",
+     "When the facility opens for the day",
+     "When the cooking equipment is on",
+     "Never during service"
+    ],
+    "a": 2,
+    "why": "The exhaust fan runs whenever the cooking equipment is on."
+   },
+   {
+    "type": "quiz",
+    "q": "The best way to protect the roof membrane around a fan from grease is:",
+    "o": [
+     "Power washing",
+     "Spreading sawdust",
+     "Chemical degreaser",
+     "A grease collection device"
+    ],
+    "a": 3,
+    "why": "A grease collection and containment device keeps grease off the roof membrane."
+   }
+  ]
+ },
+ "loto": {
+  "id": "loto",
+  "title": "Lockout / Tagout",
+  "tag": "OSHA",
+  "blurb": "De-energize before you service the fan.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "loto/loto_01.jpg",
+    "title": "De-energize before service",
+    "cap": "Before you open a belt guard, reach into a fan, or service any powered equipment, the power has to be off. A fan that restarts with your hand in it does not give second chances. OSHA 1910.147 is the energy-control rule."
+   },
+   {
+    "type": "slide",
+    "img": "diag/loto.svg",
+    "title": "The lockout sequence",
+    "cap": "Five steps, in order. Notify the kitchen, shut the fan down, turn the disconnect to OFF, apply your own lock and tag, then try-starting the fan to prove the power is gone. The lock and the DANGER - DO NOT OPERATE tag carry your name, and only you take them off."
+   },
+   {
+    "type": "slide",
+    "img": "loto/loto_02.jpg",
+    "title": "Shut the disconnect",
+    "cap": "Find the equipment's own electrical disconnect, usually on the roof near the fan, and turn it to OFF. Shutting it at the disconnect, not just a wall switch, is what cuts power to the motor."
+   },
+   {
+    "type": "slide",
+    "img": "loto/loto_03.jpg",
+    "title": "Lock it out",
+    "cap": "Put your own padlock on the disconnect, through a lockout hasp if needed, so no one can turn it back on. One lock, one key, and you hold the key. If several people work on it, each adds their own lock."
+   },
+   {
+    "type": "slide",
+    "img": "loto/loto_04.jpg",
+    "title": "Tag it out",
+    "cap": "Hang a DANGER - DO NOT OPERATE tag on the lock with who locked it out, the date, and why. The tag tells everyone the equipment is down for service. Never remove a lock or tag that is not yours."
+   },
+   {
+    "type": "slide",
+    "img": "loto/loto_05.jpg",
+    "title": "Verify zero energy",
+    "cap": "Before you touch the equipment, try to start it at the normal controls. If it stays dead, the lockout worked and it is safe to work. Then return the controls to off. This verification is what proves the power is really gone."
+   },
+   {
+    "type": "quiz",
+    "q": "Before servicing a powered fan, you must first:",
+    "o": [
+     "Slow the blades by hand",
+     "De-energize it and lock out the power",
+     "Just tell a coworker",
+     "Work fast so it cannot start"
+    ],
+    "a": 1,
+    "why": "OSHA 1910.147: the energy has to be controlled. De-energize, lock, tag, and verify before you touch it."
+   },
+   {
+    "type": "quiz",
+    "q": "You cut the power at:",
+    "o": [
+     "The kitchen light switch",
+     "The equipment's electrical disconnect",
+     "The thermostat",
+     "The grease cup"
+    ],
+    "a": 1,
+    "why": "Turn the equipment's own disconnect to OFF so power to the motor is cut, not just a wall switch."
+   },
+   {
+    "type": "quiz",
+    "q": "Whose lock goes on the disconnect, and who holds the key?",
+    "o": [
+     "A shared shop lock on a shared key",
+     "Your own lock, and you hold the only key",
+     "The building manager's lock",
+     "No lock is needed if you tag it"
+    ],
+    "a": 1,
+    "why": "One lock, one key, held by you. If several people work on it, each adds their own lock."
+   },
+   {
+    "type": "quiz",
+    "q": "The DO NOT OPERATE tag shows:",
+    "o": [
+     "Who locked it out, the date, and why",
+     "The equipment model number",
+     "The grease weight removed",
+     "The warranty date"
+    ],
+    "a": 0,
+    "why": "The tag names who, when, and why. Nobody removes a lock or tag that is not theirs."
+   },
+   {
+    "type": "quiz",
+    "q": "The final step before working is to:",
+    "o": [
+     "Wait five minutes",
+     "Try to start it and confirm it stays dead",
+     "Paint the guard",
+     "Call the office"
+    ],
+    "a": 1,
+    "why": "Verify zero energy: try the normal controls; if it will not start, the lockout worked. Then return the controls to off."
+   },
+   {
+    "type": "quiz",
+    "q": "If a tag cannot be affixed to the energy-isolating device, it must be placed:",
+    "o": [
+     "In a central location on the premises",
+     "On a sign within 10 ft of the source",
+     "With the SDS and permit documents",
+     "As close as safely possible, obvious to anyone trying to operate the device"
+    ],
+    "a": 3,
+    "why": "Place the tag as close as safely possible, where it is immediately obvious to anyone attempting to operate the device."
+   },
+   {
+    "type": "quiz",
+    "q": "Lockout devices must be 'identifiable,' meaning they:",
+    "o": [
+     "Are visible from 10 ft away",
+     "Are painted a bright color",
+     "Identify the employee who applied them",
+     "Are stamped with the host company name"
+    ],
+    "a": 2,
+    "why": "The device identifies who applied it, by the employee's name."
+   }
+  ]
+ },
+ "ppe": {
+  "id": "ppe",
+  "title": "PPE & Respirators",
+  "tag": "OSHA",
+  "blurb": "Dress for grease, caustics, and overhead work.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "ppe/ppe_01.jpg",
+    "title": "Dress for the job",
+    "cap": "Kitchen exhaust cleaning means caustic degreaser, hot grease overhead, and slick surfaces. Full PPE is safety glasses, chemical-resistant gloves, a waterproof apron or suit, and slip-resistant boots. OSHA requires the employer to provide it and you to wear it."
+   },
+   {
+    "type": "slide",
+    "img": "ppe/ppe_02.jpg",
+    "title": "Eye and face protection",
+    "cap": "You work under dripping grease and spray caustic cleaner overhead, so splash and drip go straight at your eyes. Wear safety glasses, goggles, or a face shield. Caustic degreaser in the eye is an emergency."
+   },
+   {
+    "type": "slide",
+    "img": "ppe/ppe_03.jpg",
+    "title": "Chemical-resistant gloves",
+    "cap": "Degreasers are caustic and burn skin on contact. Wear long nitrile or rubber chemical-resistant gloves, not cotton or leather, and cover the gap between glove and sleeve."
+   },
+   {
+    "type": "slide",
+    "img": "ppe/ppe_04.jpg",
+    "title": "Wear a respirator",
+    "cap": "When you fog or spray degreaser, or work an enclosed space with fumes, wear a proper half-mask respirator with the right cartridges. Under OSHA 1910.134 a tight-fitting respirator must be fit-tested to you, and you must be clean-shaven at the seal."
+   },
+   {
+    "type": "slide",
+    "img": "ppe/ppe_05.jpg",
+    "title": "Know your chemical",
+    "cap": "Read the SDS and the label before you use any cleaner. Know what it is, how to handle a splash, and where the nearest water or eyewash is. Cover your skin, never mix chemicals, and keep eyewash within reach."
+   },
+   {
+    "type": "quiz",
+    "q": "PPE for kitchen exhaust cleaning includes:",
+    "o": [
+     "Just gloves",
+     "Safety glasses, chemical gloves, apron, and slip-resistant boots",
+     "Sunglasses and sneakers",
+     "No PPE if you are careful"
+    ],
+    "a": 1,
+    "why": "Caustics, overhead grease, and slick surfaces call for full PPE. The employer provides it and you wear it."
+   },
+   {
+    "type": "quiz",
+    "q": "Why wear eye protection?",
+    "o": [
+     "To look professional",
+     "Caustic cleaner and dripping grease go right at your eyes",
+     "To block sunlight",
+     "It is optional indoors"
+    ],
+    "a": 1,
+    "why": "You spray caustic overhead and work under drips; a chemical splash in the eye is an emergency."
+   },
+   {
+    "type": "quiz",
+    "q": "The right gloves for degreaser are:",
+    "o": [
+     "Cotton work gloves",
+     "Leather gloves",
+     "Long nitrile or rubber chemical-resistant gloves",
+     "Bare hands with a good grip"
+    ],
+    "a": 2,
+    "why": "Degreasers burn skin; wear chemical-resistant gloves and cover the glove-to-sleeve gap."
+   },
+   {
+    "type": "quiz",
+    "q": "A tight-fitting respirator must be:",
+    "o": [
+     "Any size, shared between the crew",
+     "Fit-tested to you, and you clean-shaven at the seal",
+     "Worn over a beard",
+     "Only for outdoor work"
+    ],
+    "a": 1,
+    "why": "OSHA 1910.134: fit-tested to the wearer, with a clean seal, and the right cartridges for the job."
+   },
+   {
+    "type": "quiz",
+    "q": "Before using a new cleaner you:",
+    "o": [
+     "Smell it to identify it",
+     "Read the SDS and label and locate eyewash",
+     "Mix it stronger",
+     "Skip it if you are in a hurry"
+    ],
+    "a": 1,
+    "why": "Know the chemical, how to handle a splash, and where water or eyewash is. Never mix chemicals."
+   },
+   {
+    "type": "quiz",
+    "q": "OSHA requires safety glasses with side protection when:",
+    "o": [
+     "There is a hazard from flying objects",
+     "Compressed air is being used",
+     "The user wears contact lenses",
+     "Any splashing might occur"
+    ],
+    "a": 0,
+    "why": "Side protection is required where there is a hazard from flying objects."
+   },
+   {
+    "type": "quiz",
+    "q": "The right eye protection when working with caustic degreasers is:",
+    "o": [
+     "Safety glasses",
+     "Sunglasses",
+     "Safety goggles",
+     "Prescription eyeglasses"
+    ],
+    "a": 2,
+    "why": "Caustic chemicals call for sealed safety goggles, not open-sided glasses."
+   },
+   {
+    "type": "quiz",
+    "q": "A respirator must be fit-tested with the same make, model, and size at least:",
+    "o": [
+     "Every three years",
+     "Annually",
+     "Quarterly",
+     "Monthly"
+    ],
+    "a": 1,
+    "why": "OSHA: fit-test at least annually with the same make, model, and size that will be used."
+   },
+   {
+    "type": "quiz",
+    "q": "Which of these is personal protective equipment (PPE)?",
+    "o": [
+     "A respirator",
+     "An access door",
+     "Plastic sheeting",
+     "A fire extinguisher"
+    ],
+    "a": 0,
+    "why": "A respirator is PPE worn by the technician. The others are equipment or materials, not PPE."
+   }
+  ]
+ },
+ "cs": {
+  "id": "cs",
+  "title": "Confined Space Entry",
+  "tag": "OSHA",
+  "blurb": "Big ducts and plenums you can climb into.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "cs/cs_01.jpg",
+    "title": "What is a confined space",
+    "cap": "A large duct, plenum, or walk-in hood you can climb into, with a limited way in and out and not meant to be occupied, is a confined space. If it has a hazard like bad air, it is permit-required. OSHA 1910.146 governs entry."
+   },
+   {
+    "type": "slide",
+    "img": "diag/csentry.svg",
+    "title": "The entry setup",
+    "cap": "Everything is in place before anyone goes in. The air is tested for oxygen, flammable vapor, and toxic gas. A blower pushes fresh air in. An attendant stays outside on a retrieval line and never enters. The entry permit is posted. The attendant and the permit are what make entry safe."
+   },
+   {
+    "type": "slide",
+    "img": "cs/cs_02.jpg",
+    "title": "Test the air first",
+    "cap": "Before anyone goes in, test the atmosphere with a calibrated gas meter: enough oxygen, no flammable vapor, no toxic gas. Grease solvents and low oxygen are invisible. Never enter air you have not tested."
+   },
+   {
+    "type": "slide",
+    "img": "cs/cs_03.jpg",
+    "title": "The attendant",
+    "cap": "An attendant stays outside the whole time, in constant voice or visual contact with the entrant, with a retrieval line rigged and ready. The attendant watches for trouble and calls rescue, and never enters the space."
+   },
+   {
+    "type": "slide",
+    "img": "cs/cs_04.jpg",
+    "title": "Ventilate the space",
+    "cap": "Lock out the fan first, then set up a blower to push fresh air in and keep it moving the entire time anyone is inside. Ventilation keeps the atmosphere safe while the work goes on."
+   },
+   {
+    "type": "slide",
+    "img": "cs/cs_05.jpg",
+    "title": "The entry permit",
+    "cap": "A permit-required space needs a written entry permit: the hazards, the air-test results, who is entering and attending, and the rescue plan, all before entry. Most confined-space deaths are would-be rescuers, so never dive in to save someone without the plan and the gear."
+   },
+   {
+    "type": "quiz",
+    "q": "A large duct or plenum you can climb into, with a limited way out, is:",
+    "o": [
+     "A regular work area",
+     "A confined space",
+     "Exempt from the rules",
+     "Safe once the fan is off"
+    ],
+    "a": 1,
+    "why": "OSHA 1910.146: large enough to enter, limited entry and exit, not meant for occupancy. With a hazard it is permit-required."
+   },
+   {
+    "type": "quiz",
+    "q": "Before entry you must:",
+    "o": [
+     "Just look inside",
+     "Test the atmosphere with a gas meter",
+     "Hold your breath",
+     "Open a window"
+    ],
+    "a": 1,
+    "why": "Test for oxygen, flammable vapor, and toxic gas. Never enter untested air."
+   },
+   {
+    "type": "quiz",
+    "q": "The attendant's job is to:",
+    "o": [
+     "Enter first to check it out",
+     "Stay outside, keep contact, and be ready to call rescue",
+     "Hold the ladder",
+     "Take a break"
+    ],
+    "a": 1,
+    "why": "The attendant stays outside the whole time with a retrieval line ready, and never enters the space."
+   },
+   {
+    "type": "quiz",
+    "q": "While someone is inside, ventilation should be:",
+    "o": [
+     "Off to save power",
+     "Running continuously, with the fan locked out",
+     "On for a minute, then off",
+     "Only if it smells bad"
+    ],
+    "a": 1,
+    "why": "Lock out the fan, then keep fresh air moving the entire time anyone is inside."
+   },
+   {
+    "type": "quiz",
+    "q": "If someone collapses inside, you should:",
+    "o": [
+     "Rush in and pull them out",
+     "Call rescue, and never enter without the plan and gear",
+     "Wait and see",
+     "Turn the fan on"
+    ],
+    "a": 1,
+    "why": "Most confined-space deaths are would-be rescuers. Follow the rescue plan with proper equipment."
+   },
+   {
+    "type": "quiz",
+    "q": "Entry into a confined space occurs as soon as:",
+    "o": [
+     "Any part of the entrant's body breaks the plane of the opening",
+     "The entrant is completely inside",
+     "The entrant is halfway in",
+     "The entrant has been inside 20 seconds"
+    ],
+    "a": 0,
+    "why": "Entry happens the moment any part of the body breaks the plane of the opening, so the permit and attendant must be set first."
+   }
+  ]
+ },
+ "freq": {
+  "id": "freq",
+  "title": "Cleaning Frequencies & Bare Metal",
+  "tag": "NFPA 96",
+  "blurb": "How often to clean, and how clean is clean.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "freq/freq_01.jpg",
+    "title": "How often to clean",
+    "cap": "NFPA 96 sets how often a system is inspected and cleaned by how much grease the cooking produces, not by guesswork. The busier and greasier the kitchen, the shorter the interval."
+   },
+   {
+    "type": "slide",
+    "img": "freq/freq_02.jpg",
+    "title": "The four intervals",
+    "cap": "NFPA 96 Table 11.4 sets four tiers. Solid fuel (wood, charcoal) is monthly. High-volume (charbroiling, wok, 24-hour) is quarterly. Moderate-volume is semiannual. Low-volume (seasonal, churches, camps) is annual."
+   },
+   {
+    "type": "slide",
+    "img": "freq/freq_03.jpg",
+    "title": "It is a minimum",
+    "cap": "The table is a minimum inspection schedule, not a ceiling. If the system is loading up with grease faster than the interval, clean it sooner. The authority having jurisdiction can require it more often."
+   },
+   {
+    "type": "slide",
+    "img": "freq/freq_04.jpg",
+    "title": "Clean to bare metal",
+    "cap": "The standard of clean is to remove the combustible grease deposits (NFPA 96, Chapter 11). The IKECA and Phil Ackland practice standard is bare metal, checked with a depth gauge, with 0.002 in (50 microns) the common benchmark. Grease left behind is fuel left behind."
+   },
+   {
+    "type": "slide",
+    "img": "freq/freq_05.jpg",
+    "title": "Document the service",
+    "cap": "After cleaning, record the service: the date, the company, and any areas that could not be cleaned, and leave a certificate or label on the system. The record goes to the owner and the authority having jurisdiction. If it is not documented, it did not happen."
+   },
+   {
+    "type": "quiz",
+    "q": "NFPA 96 sets cleaning frequency by:",
+    "o": [
+     "The day of the week",
+     "How much grease the cooking produces",
+     "The size of the building",
+     "The owner's budget"
+    ],
+    "a": 1,
+    "why": "Frequency is driven by cooking volume. The greasier the operation, the shorter the interval."
+   },
+   {
+    "type": "quiz",
+    "q": "A solid-fuel (wood or charcoal) operation is cleaned:",
+    "o": [
+     "Monthly",
+     "Annually",
+     "Every five years",
+     "Never"
+    ],
+    "a": 0,
+    "why": "NFPA 96 Table 11.4: solid-fuel cooking is the monthly tier."
+   },
+   {
+    "type": "quiz",
+    "q": "High-volume cooking (charbroiling, wok, 24-hour) is cleaned:",
+    "o": [
+     "Annually",
+     "Quarterly",
+     "Every two years",
+     "Weekly"
+    ],
+    "a": 1,
+    "why": "High-volume operations are the quarterly tier."
+   },
+   {
+    "type": "quiz",
+    "q": "The cleaning frequency table is:",
+    "o": [
+     "A maximum you cannot exceed",
+     "A minimum; clean sooner if grease builds faster",
+     "Optional",
+     "Only a loose suggestion"
+    ],
+    "a": 1,
+    "why": "It is a minimum schedule. Heavy grease loading or the authority having jurisdiction can require more frequent cleaning."
+   },
+   {
+    "type": "quiz",
+    "q": "The standard of a clean system is:",
+    "o": [
+     "It looks clean from the floor",
+     "Bare metal, with the combustible grease removed",
+     "Wiped down once",
+     "The filters only"
+    ],
+    "a": 1,
+    "why": "Remove the combustible grease to bare metal, with 0.002 in (50 microns) the benchmark, checked with a depth gauge."
+   },
+   {
+    "type": "quiz",
+    "q": "A moderate-volume cooking operation is inspected for cleanliness:",
+    "o": [
+     "Annually",
+     "Semiannually",
+     "Monthly",
+     "Quarterly"
+    ],
+    "a": 1,
+    "why": "NFPA 96: moderate-volume cooking is the semiannual tier."
+   }
+  ]
+ },
+ "practice": {
+  "id": "practice",
+  "title": "On the Job: Cleaning Practice",
+  "tag": "NFPA 96",
+  "blurb": "Prep, process, chemicals, and the paperwork that closes a job.",
+  "steps": [
+   {
+    "type": "slide",
+    "img": "clean/prep.jpg",
+    "title": "Prep and protect",
+    "cap": "Before any grease comes off, protect the space. Wrap and mask the hood, cookline, and surrounding area with plastic sheeting or tarps to catch grease and water. The fire suppression system stays in place and is never rendered inoperable during the work (NFPA 96)."
+   },
+   {
+    "type": "slide",
+    "img": "clean/whole.jpg",
+    "title": "Clean the whole system, to bare metal",
+    "cap": "Clean the entire exhaust system, hood to fan, to remove the combustible grease (NFPA 96). Use scrapers, brushes, and approved cleaners. Never use gasoline or any flammable solvent to loosen deposits, under any circumstance."
+   },
+   {
+    "type": "slide",
+    "img": "clean/waste.jpg",
+    "title": "Chemicals and waste",
+    "cap": "Know your chemicals. You are trained on their hazards before you use them, and a Safety Data Sheet is available within the shift. Wear goggles with caustic degreasers. Dispose of water, chemicals, and grease into the kitchen grease trap, never a storm drain or the parking lot."
+   },
+   {
+    "type": "slide",
+    "img": "clean/finish.jpg",
+    "title": "Finish the job",
+    "cap": "Before you leave: return every switch and component to an operable state and confirm the fan runs. Give the owner a written report. Affix the new service sticker, remove the old certificates, and place the service label on or near each access panel (NFPA 96)."
+   },
+   {
+    "type": "slide",
+    "img": "clean/code.jpg",
+    "title": "Know the code words",
+    "cap": "NFPA 96 is a code, and its words are exact. 'Shall' is a mandatory requirement. 'Should' is a recommendation. The standard requires the kitchen exhaust technician to be properly trained, qualified, and certified, which is why SDI holds the IKECA CECS and CESI certifications."
+   },
+   {
+    "type": "quiz",
+    "q": "Before cleaning begins, what is done with the hood and cookline area?",
+    "o": [
+     "Move all the appliances out",
+     "Wrap and mask it with plastic sheeting or tarps",
+     "Leave it fully open for airflow",
+     "Trigger the fire suppression system"
+    ],
+    "a": 1,
+    "why": "Mask and protect the hood, cookline, and surrounding area with plastic or tarps to catch grease and water before cleaning."
+   },
+   {
+    "type": "quiz",
+    "q": "During cleaning, components of the fire suppression system:",
+    "o": [
+     "Shall be disabled and rendered inoperable",
+     "Shall be removed from the hood",
+     "Shall not be rendered inoperable",
+     "Shall be cleaned with high-pressure steam"
+    ],
+    "a": 2,
+    "why": "NFPA 96: the fire suppression system shall not be rendered inoperable during cleaning."
+   },
+   {
+    "type": "quiz",
+    "q": "A kitchen exhaust cleaning shall include:",
+    "o": [
+     "The hood and filters only",
+     "Grease removal devices, fans, and ducts only",
+     "The entire exhaust system",
+     "The appliances"
+    ],
+    "a": 2,
+    "why": "NFPA 96: the cleaning covers the entire exhaust system, hood to fan."
+   },
+   {
+    "type": "quiz",
+    "q": "To loosen hard carbon deposits, using gasoline is:",
+    "o": [
+     "Allowed with trained supervision",
+     "Allowed if the building is evacuated",
+     "Recommended with hand scraping",
+     "Not acceptable under any circumstance"
+    ],
+    "a": 3,
+    "why": "NFPA 96: gasoline is never acceptable to loosen deposits. Use approved cleaners and hand tools."
+   },
+   {
+    "type": "quiz",
+    "q": "Employees must be trained on the hazards of the chemicals they use:",
+    "o": [
+     "Before working with the chemicals",
+     "Only if they show symptoms",
+     "Within 30 days of first use",
+     "Only if the chemical is sprayed"
+    ],
+    "a": 0,
+    "why": "OSHA Hazard Communication: training on chemical hazards happens before working with them."
+   },
+   {
+    "type": "quiz",
+    "q": "A Safety Data Sheet must be available to an employee who requests it within:",
+    "o": [
+     "The same work shift",
+     "2 working days",
+     "5 working days",
+     "24 hours"
+    ],
+    "a": 0,
+    "why": "OSHA: the SDS must be accessible within the same work shift of the request."
+   },
+   {
+    "type": "quiz",
+    "q": "Where do you dispose of water, chemicals, and grease on site?",
+    "o": [
+     "The storm drain",
+     "The kitchen grease trap",
+     "The parking lot",
+     "Any outside drain"
+    ],
+    "a": 1,
+    "why": "Dispose into the kitchen grease trap, never a storm drain or the parking lot."
+   },
+   {
+    "type": "quiz",
+    "q": "Before leaving the job, you must make sure that:",
+    "o": [
+     "The owner gets a written report",
+     "All switches and components are returned to an operable state",
+     "The exhaust fan runs properly",
+     "All of the above"
+    ],
+    "a": 3,
+    "why": "All of it: restore everything to operable, confirm the fan runs, and give the owner a written report."
+   },
+   {
+    "type": "quiz",
+    "q": "After cleaning and affixing a new service sticker, the old certificates should be:",
+    "o": [
+     "Removed",
+     "Crossed out",
+     "Covered by the new sticker",
+     "Left until over a year old"
+    ],
+    "a": 0,
+    "why": "Remove the old certificates when you affix the new service sticker."
+   },
+   {
+    "type": "quiz",
+    "q": "In NFPA 96, the word 'shall' indicates a mandatory requirement, and 'should' indicates:",
+    "o": [
+     "Another mandatory requirement",
+     "A recommendation, advised but not required",
+     "The client has the final say",
+     "The technician's own discretion on safety"
+    ],
+    "a": 1,
+    "why": "'Shall' is mandatory. 'Should' is a recommendation, advised but not required."
+   }
+  ]
+ }
 };
-var LIVE=["ladder","hood","duct","fans","loto","ppe","cs","freq"];
+var LIVE=["ladder","hood","duct","fans","loto","ppe","cs","freq","practice"];
 var SOON=[];
 
 (function(){var s=lsGet("sdt_theme","");if(s)document.documentElement.setAttribute("data-theme",s);
